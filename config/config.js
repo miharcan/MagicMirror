@@ -86,7 +86,7 @@ var config = {
 				location: "Galway",
 				locationID: "2964180", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
 				showRainAmount: true, // let see if this works
-				maxNumberOfDays: 6,
+				maxNumberOfDays: 7,
 				appid: "0ba99ed2b248d02717d54207c248d03e"
 			}
 		},
