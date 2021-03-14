@@ -75,7 +75,7 @@ var config = {
 				useBeaufort: false,
 				useKMPHwind: "true",
 				showFeelsLike: false,
-				appid: "0ba99ed2b248d02717d54207c248d03e"
+				appid: "YOUR_API_KEY"
 			}
 		},
 		{
@@ -87,7 +87,7 @@ var config = {
 				locationID: "2964180", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
 				showRainAmount: true, // let see if this works
 				maxNumberOfDays: 7,
-				appid: "0ba99ed2b248d02717d54207c248d03e"
+				appid: "YOUR_OPENWEATHER_API_KEY"
 			}
 		},
 		{
@@ -101,14 +101,14 @@ var config = {
 				//opt ['pressure', 'cloudCover', 'visibility', 'seaLevel', 'windSpeed', 'gust', 'windDirection', 'waveHeight', 'waveDirection', 'wavePeriod']
 				showWindDirectionAsArrow: true,
 				useBeaufort: true,
-				appid: "ea22bd8a-3d3a-11eb-9009-0242ac130002-ea22be52-3d3a-11eb-9009-0242ac130002" // StormGlass API key (docs.stormglass.io)
+				appid: "YOUR_API_KEY" // StormGlass API key (docs.stormglass.io)
 			}
 		},
 		{
 			module: "MMM-Traffic",
 			position: "bottom_left",
 			config: {
-				accessToken: "pk.eyJ1IjoibWloYXJjYW4iLCJhIjoiY2tpbjZremI3MDV4dzJ0bWxoaGowcnlwciJ9.1xFy-XhcmigiCwy3taqhgw",
+				accessToken: "YOUR_API_KEY",
 				originCoords: "-8.925245290173217,53.26676911338486",
 				destinationCoords: "-9.074422267449028,53.29002747011715",
 				firstLine: "{duration} mins",
@@ -122,7 +122,7 @@ var config = {
 			module: "MMM-Traffic",
 			position: "bottom_right",
 			config: {
-				accessToken: "pk.eyJ1IjoibWloYXJjYW4iLCJhIjoiY2tpbjZremI3MDV4dzJ0bWxoaGowcnlwciJ9.1xFy-XhcmigiCwy3taqhgw",
+				accessToken: "YOUR_OPENWEATHER_API_KEY",
 				originCoords: "-8.925245290173217,53.26676911338486",
 				destinationCoords: "-8.56543840520483,53.190160254037416",
 				firstLine: "{duration} mins",
