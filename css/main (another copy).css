@@ -39,28 +39,28 @@ body {
 }
 
 .xsmall {
-  font-size: 11px;
-  line-height: 11px;
+  font-size: 10px;
+  line-height: 10px;
 }
 
 .small {
-  font-size: 22px;
-  line-height: 22px;
+  font-size: 20px;
+  line-height: 20px;
 }
 
 .medium {
-  font-size: 33px;
-  line-height: 33px;
+  font-size: 30px;
+  line-height: 30px;
 }
 
 .large {
-  font-size: 44px;
-  line-height: 44px;
+  font-size: 40px;
+  line-height: 40px;
 }
 
 .xlarge {
-  font-size: 55px;
-  line-height: 55px;
+  font-size: 50px;
+  line-height: 50px;
   letter-spacing: -3px;
 }
 

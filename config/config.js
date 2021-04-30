@@ -47,7 +47,12 @@ var config = {
 		//},
 		{
 			module: "clock",
-			position: "top_left"
+			position: "top_left",
+			config: {
+				showSunTimes: false,
+				timezone: "IE|Europe/Dublin",
+				displaySeconds: true
+			}
 		},
 		//{
 		//	module: "calendar",
@@ -73,7 +78,7 @@ var config = {
 				showWindDirectionAsArrow: true,
 				locationID: "2964180", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
 				useBeaufort: false,
-				useKMPHwind: "true",
+				useKMPHwind: true,
 				showFeelsLike: false,
 				appid: "0ba99ed2b248d02717d54207c248d03e"
 			}
@@ -86,23 +91,47 @@ var config = {
 				location: "Galway",
 				locationID: "2964180", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
 				showRainAmount: true, // let see if this works
-				maxNumberOfDays: 6,
+				maxNumberOfDays: 5,
+				fade: false,
+				fadePoint: 0.1,
 				appid: "0ba99ed2b248d02717d54207c248d03e"
 			}
 		},
+//		{
+//			module: "MMM-MarineWeather",
+//			position: "top_right",
+//			config: {
+//				latitude: 53.270962, // Latitude 
+//				longitude: -9.062691, // Longitude
+//				params: ['airTemperature', 'waterTemperature', 'windSpeed', 'gust', 'windDirection', 'waveHeight', 'waveDirection'], // 
+////				//def ['airTemperature', 'waterTemperature', 'pressure', 'cloudCover', 'windSpeed', 'windDirection', 'waveHeight', 'waveDirection']
+////				//opt ['pressure', 'cloudCover', 'visibility', 'seaLevel', 'windSpeed', 'gust', 'windDirection', 'waveHeight', 'waveDirection', 'wavePeriod']
+//				showWindDirectionAsArrow: true,
+//				useBeaufort: true,
+//				appid: "ea22bd8a-3d3a-11eb-9009-0242ac130002-ea22be52-3d3a-11eb-9009-0242ac130002" // StormGlass API key (docs.stormglass.io)
+//			}
+//		},
 		{
-			module: "MMM-MarineWeather",
-			position: "top_right",
-			config: {
-				latitude: 53.270962, // Latitude 
-				longitude: -9.062691, // Longitude
-				params: ['airTemperature', 'waterTemperature', 'windSpeed', 'gust', 'windDirection', 'waveHeight', 'waveDirection'], // 
-				//def ['airTemperature', 'waterTemperature', 'pressure', 'cloudCover', 'windSpeed', 'windDirection', 'waveHeight', 'waveDirection']
-				//opt ['pressure', 'cloudCover', 'visibility', 'seaLevel', 'windSpeed', 'gust', 'windDirection', 'waveHeight', 'waveDirection', 'wavePeriod']
-				showWindDirectionAsArrow: true,
-				useBeaufort: true,
-				appid: "ea22bd8a-3d3a-11eb-9009-0242ac130002-ea22be52-3d3a-11eb-9009-0242ac130002" // StormGlass API key (docs.stormglass.io)
-			}
+		    "module": "MMM-WeatherChart",
+		    "position": "lower_third",
+		    "config": {
+		        "apiKey": "0ba99ed2b248d02717d54207c248d03e",
+		        "title" : "",
+		        "fontSize" : 12,
+		        "dataNum": 48,
+		        "hourFormat" : "12h",
+		        "dataType": "hourly",
+		        "height": "200px",
+		        "width": "780px",
+		        "lat": 53.270962,
+		        "lon": -9.062691,
+		        "units": "metric",
+		        "nightBorderDash" : [3,2],
+		        "showIcon" : false,
+		        "iconWidth" : 25,
+		        "iconHeight" : 25,
+		        "showRain": true
+		    }
 		},
 		{
 			module: "MMM-Traffic",
@@ -111,8 +140,8 @@ var config = {
 				accessToken: "pk.eyJ1IjoibWloYXJjYW4iLCJhIjoiY2tpbjZremI3MDV4dzJ0bWxoaGowcnlwciJ9.1xFy-XhcmigiCwy3taqhgw",
 				originCoords: "-8.925245290173217,53.26676911338486",
 				destinationCoords: "-9.074422267449028,53.29002747011715",
-				firstLine: "{duration} mins",
-				secondLine: "To DSI",
+				firstLine: "{duration} mins to DSI",
+//				secondLine: "To DSI",
 				//days: [0,1,2,3,4],
 				//hoursStart: "08:00",
 				//hoursEnd: "10:00"
@@ -125,29 +154,29 @@ var config = {
 				accessToken: "pk.eyJ1IjoibWloYXJjYW4iLCJhIjoiY2tpbjZremI3MDV4dzJ0bWxoaGowcnlwciJ9.1xFy-XhcmigiCwy3taqhgw",
 				originCoords: "-8.925245290173217,53.26676911338486",
 				destinationCoords: "-8.56543840520483,53.190160254037416",
-				firstLine: "{duration} mins",
-				secondLine: "To Loughrea",
+				firstLine: "{duration} mins to Loughrea",
+//				secondLine: "To Loughrea",
 				//days: [0,1,2,3,4],
 				//hoursStart: "08:00",
 				//hoursEnd: "10:00"
 			}
 		},
-		//{
-		//	module: "newsfeed",
-		//	position: "bottom_bar",
-		//	config: {
-		//		feeds: [
-		//			{
-		//				title: "New York Times",
-		//				url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
-		//			}
-		//		],
-		//		showSourceTitle: true,
-		//		showPublishDate: true,
-		//		broadcastNewsFeeds: true,
-		//		broadcastNewsUpdates: true
-		//	}
-		//},
+//		{
+//			module: "newsfeed",
+//			position: "bottom_bar",
+//			config: {
+//				feeds: [
+//					{
+//						title: "New York Times",
+//						url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+//					}
+//				],
+//				showSourceTitle: true,
+//				showPublishDate: true,
+//				broadcastNewsFeeds: true,
+//				broadcastNewsUpdates: true
+//			}
+//		},
 	]
 };
 

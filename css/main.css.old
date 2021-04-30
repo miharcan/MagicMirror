@@ -9,10 +9,10 @@ html {
 }
 
 body {
-  margin: 5px;
+  margin: 60px;
   position: absolute;
-  height: calc(100% - 10px);
-  width: calc(100% - 10px);
+  height: calc(100% - 60px);
+  width: calc(100% - 120px);
   background: #000;
   color: #aaa;
   font-family: "Roboto Condensed", sans-serif;
@@ -39,28 +39,28 @@ body {
 }
 
 .xsmall {
-  font-size: 11px;
-  line-height: 11px;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .small {
-  font-size: 22px;
-  line-height: 22px;
+  font-size: 20px;
+  line-height: 25px;
 }
 
 .medium {
-  font-size: 33px;
-  line-height: 33px;
+  font-size: 30px;
+  line-height: 35px;
 }
 
 .large {
-  font-size: 44px;
-  line-height: 44px;
+  font-size: 65px;
+  line-height: 65px;
 }
 
 .xlarge {
-  font-size: 55px;
-  line-height: 55px;
+  font-size: 75px;
+  line-height: 75px;
   letter-spacing: -3px;
 }
 
@@ -100,7 +100,7 @@ header {
   border-bottom: 1px solid #666;
   line-height: 15px;
   padding-bottom: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   color: #999;
 }
 
